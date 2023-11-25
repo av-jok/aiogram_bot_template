@@ -20,4 +20,5 @@ COPY migrations /app/migrations
 COPY translations /app/translations
 COPY utils /app/utils
 COPY alembic.ini /app/alembic.ini
+RUN apt update && apt install -y iputils-ping
 CMD ["python", "-m", "bot"]

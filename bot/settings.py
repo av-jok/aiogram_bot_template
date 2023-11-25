@@ -6,7 +6,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     bot_token: SecretStr
-    use_webhook: bool
+    use_webhook: bool = False
     drop_pending_updates: bool
     dev_id: int
 
